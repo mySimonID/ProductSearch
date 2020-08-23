@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Product search example using Javascript</h1>
+  </div>
+  <div class="container">
+    <div class="search-panel">
+      <div class="search-row">
+        <input id="search" onkeyup="searchText()" placeholder="search" />
+      </div>
+
+      <div class="facet-panel">
+
+        <div class="facet-row">
+          <input type="radio" id="stockAll" name="stock" value="All" checked onClick="searchByFacet('all')">
+          <label for='stockAll'>All</label>
+        </div>
+        <div class="facet-row">
+          <input type="radio" id="instock" name="stock" value="InStock" onClick="searchByFacet('instock')">
+          <label for='instock'>In-stock</label>
+        </div>
+      </div>
+
+      <div class="colour-row">
+        <ul id="colours">
+
+        </ul>
+      </div>
+    </div>
+    <div class="product-panel">
+      <ul class="products">
+
+      </ul>
+    </div>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
